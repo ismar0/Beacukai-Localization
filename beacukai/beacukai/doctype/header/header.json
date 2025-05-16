@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "autoname": "format:BC{bctype}-{nomor_daftar}-{tanggal_daftar}",
+ "creation": "2025-02-28 13:06:50.688350",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "bctype",
+  "section_break_djqo",
+  "nomor_aju",
+  "tanggal_aju",
+  "column_break_wzdr",
+  "nomor_daftar",
+  "tanggal_daftar"
+ ],
+ "fields": [
+  {
+   "fieldname": "bctype",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "BC Type",
+   "options": "20\n23\n25\n261\n262\n27\n27IN\n30\n33\n40\n41",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_djqo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nomor_aju",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nomor Aju",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tanggal_aju",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Aju",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wzdr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nomor_daftar",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nomor Daftar",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tanggal_daftar",
+   "fieldtype": "Date",
+   "label": "Tanggal Daftar",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-01 13:41:41.944228",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "Header",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nomor_aju"
+}
