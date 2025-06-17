@@ -53,7 +53,7 @@ def execute(filters=None):
 		c.qty,
 		c.uom
 		FROM tabHeader a 
-		INNER JOIN `tabDelivery Note` b ON b.custom_document_beacukai = a.name
+		INNER JOIN `tabDelivery Note` b ON b.custom_beacukai_document = a.name
 		INNER JOIN `tabDelivery Note Item` c ON c.parent = b.name
         {conditions_query}
         ORDER BY a.tanggal_daftar DESC

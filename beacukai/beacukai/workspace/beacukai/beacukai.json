@@ -1,0 +1,87 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"DZ50uEDZNs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Beacukai</span>\",\"col\":12}},{\"id\":\"FL-oeuMV2l\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Beacukai Document\",\"col\":3}},{\"id\":\"Q9XJXio7lj\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"eGLwiXbg4-\",\"type\":\"paragraph\",\"data\":{\"text\":\"Reports\",\"col\":12}},{\"id\":\"bf-S2FHo4T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"LAPORAN PEMASUKAN BARANG PER DOKUMEN PABEAN\",\"col\":12}},{\"id\":\"pDImGRa3de\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"LAPORAN PENGELUARAN BARANG PER DOKUMEN PABEAN\",\"col\":12}},{\"id\":\"r2pFvM_1fj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"LAPORAN PERTANGGUNGJAWABAN MUTASI BAHAN BAKU DAN PENOLONG\",\"col\":12}},{\"id\":\"X1I3EwXp-Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"LAPORAN POSISI BARANG DALAM PROSES (WIP)\",\"col\":12}},{\"id\":\"qC1LwixXao\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"LAPORAN PERTANGGUNGJAWABAN MUTASI BARANG JADI\",\"col\":12}},{\"id\":\"xfNOVcuk-C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"LAPORAN PERTANGGUNGJAWABAN MUTASI BARANG SISA DAN SCRAP\",\"col\":12}},{\"id\":\"0fJFcwEVCE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"LAPORAN PERTANGGUNGJAWABAN MUTASI MESIN DAN PERALATAN PERKANTORAN\",\"col\":12}}]",
+ "creation": "2025-06-10 12:09:27.833685",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "month-view",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Beacukai",
+ "links": [],
+ "modified": "2025-06-12 16:44:23.050387",
+ "modified_by": "aam@admin.com",
+ "module": "Beacukai",
+ "name": "Beacukai",
+ "number_cards": [],
+ "owner": "aam@admin.com",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 13.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Beacukai Document",
+   "link_to": "Header",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "LAPORAN PEMASUKAN BARANG PER DOKUMEN PABEAN",
+   "type": "URL",
+   "url": "https://smarttech.angkasabirucemerlang.com/app/query-report/LAPORAN%20PEMASUKAN%20BARANG%20%20PER%20DOKUMEN%20PABEAN"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "LAPORAN PENGELUARAN BARANG PER DOKUMEN PABEAN",
+   "type": "URL",
+   "url": "https://smarttech.angkasabirucemerlang.com/app/query-report/LAPORAN%20PENGELUARAN%20BARANG%20PER%20DOKUMEN%20PABEAN"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "LAPORAN PERTANGGUNGJAWABAN MUTASI BAHAN BAKU DAN PENOLONG",
+   "type": "URL",
+   "url": "https://smarttech.angkasabirucemerlang.com/app/query-report/LAPORAN%20PERTANGGUNGJAWABAN%20MUTASI%20BAHAN%20BAKU%20DAN%20PENOLONG"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "LAPORAN POSISI BARANG DALAM PROSES (WIP)",
+   "type": "URL",
+   "url": "https://smarttech.angkasabirucemerlang.com/app/query-report/LAPORAN%20POSISI%20BARANG%20DALAM%20PROSES"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "LAPORAN PERTANGGUNGJAWABAN MUTASI BARANG JADI",
+   "type": "URL",
+   "url": "https://smarttech.angkasabirucemerlang.com/app/query-report/LAPORAN%20PERTANGGUNGJAWABAN%20MUTASI%20BARANG%20JADI"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "LAPORAN PERTANGGUNGJAWABAN MUTASI BARANG SISA DAN SCRAP",
+   "type": "URL",
+   "url": "https://smarttech.angkasabirucemerlang.com/app/query-report/LAPORAN%20PERTANGGUNGJAWABAN%20MUTASI%20BARANG%20SISA%20DAN%20SCRAP"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "LAPORAN PERTANGGUNGJAWABAN MUTASI MESIN DAN PERALATAN PERKANTORAN",
+   "type": "URL",
+   "url": "https://smarttech.angkasabirucemerlang.com/app/query-report/LAPORAN%20PERTANGGUNGJAWABAN%20MUTASI%20MESIN%20DAN%20PERALATAN%20PERKANTORAN"
+  }
+ ],
+ "title": "Beacukai"
+}

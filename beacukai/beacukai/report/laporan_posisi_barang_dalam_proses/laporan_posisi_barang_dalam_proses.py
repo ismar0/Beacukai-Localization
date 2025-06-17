@@ -22,7 +22,7 @@ def execute(filters=None):
     ]
 
     # Apply Filters (Date & Warehouse)
-    conditions = ["sle.docstatus = 1", "sle.warehouse = 'Work In Progress - ST'"]  # ✅ Filter WIP Store only
+    conditions = ["sle.docstatus = 1", "sle.warehouse = 'Work In Progress - AAM'"]  # ✅ Filter WIP Store only
 
     if "from_date" in filters and filters["from_date"]:
         conditions.append(f"sle.posting_date >= '{filters['from_date']}'")

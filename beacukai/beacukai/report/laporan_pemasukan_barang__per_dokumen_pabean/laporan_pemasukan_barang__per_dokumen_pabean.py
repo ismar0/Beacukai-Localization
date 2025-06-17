@@ -53,7 +53,7 @@ def execute(filters=None):
 		c.received_qty,
 		c.uom
 		FROM tabHeader a 
-		INNER JOIN `tabPurchase Receipt` b ON b.custom_document_beacukai = a.name
+		INNER JOIN `tabPurchase Receipt` b ON b.custom_beacukai_document = a.name
 		INNER JOIN `tabPurchase Receipt Item` c ON c.parent = b.name
         {conditions_query}
         ORDER BY a.tanggal_daftar DESC

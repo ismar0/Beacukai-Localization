@@ -14,6 +14,37 @@ frappe.require([
     console.log("✅ Tabulator and dependencies loaded!");
 });
 
+const fontStyle = document.createElement("style");
+fontStyle.innerHTML = `
+  .tabulator {
+    font-family: Calibri, sans-serif !important;
+    font-size: 11px !important;
+  }
+
+  .tabulator .tabulator-header .tabulator-col .tabulator-col-title {
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: center;
+    padding: 4px;
+    font-size: 11px !important;
+  }
+
+  .tabulator .tabulator-cell {
+    font-size: 11px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  .tabulator .tabulator-header {
+    font-size: 11px !important;
+  }
+
+  .tabulator .tabulator-tableholder {
+    font-size: 11px !important;
+  }
+`;
+document.head.appendChild(fontStyle);
+
 frappe.query_reports["LAPORAN PENGELUARAN BARANG PER DOKUMEN PABEAN"] = {
     filters: [
         {
@@ -33,42 +64,22 @@ frappe.query_reports["LAPORAN PENGELUARAN BARANG PER DOKUMEN PABEAN"] = {
     ],
 
     onload: function(report) {
-        let reportWrapper = document.querySelector(".report-wrapper");
-        if (reportWrapper) {
-            reportWrapper.style.display = "block";  
-            reportWrapper.style.padding = "10px";
-            reportWrapper.style.backgroundColor = "#f8f9fa";
-            reportWrapper.style.borderRadius = "8px";
-        }
-    
-        setTimeout(() => {
-            let tableHolder = document.querySelector(".tabulator-tableholder");
-            if (tableHolder) {
-                tableHolder.style.height = "auto";
-                tableHolder.style.minHeight = "300px";
-                tableHolder.style.overflowX = "auto";
+        setupReportUI();
+        getReportData();
+
+        // ✅ Fix: Refresh without full page reload
+        frappe.query_report.refresh = function() {
+            console.log("🔄 Refreshing Report...");
+
+            if (tabulatorInstance) {
+                tabulatorInstance.clearData(); // ✅ Clear old data
             }
 
-            // ✅ Streamline column filters
-            document.querySelectorAll(".tabulator-header-filter input").forEach(input => {
-                input.style.width = "100%";
-                input.style.height = "24px";
-                input.style.padding = "4px";
-                input.style.fontSize = "12px";
-                input.style.border = "1px solid #ccc";
-                input.style.borderRadius = "4px";
-                input.style.boxSizing = "border-box";
-            });
-
-        }, 500); 
-    
-        getReportData();
-    
-        frappe.query_report.refresh = function() {
-            console.log("🔄 Filters changed! Refreshing report...");
-            getReportData();
+            setTimeout(() => {
+                getReportData();
+            }, 500); // ✅ Small delay prevents conflicts
         };
-    }    
+    }
 };
 
 // ✅ Extract filters properly
@@ -83,7 +94,6 @@ function getFilterValues() {
 
 // ✅ Get report data
 function getReportData() {
-    
     let filters = getFilterValues();
 
     frappe.call({
@@ -130,9 +140,14 @@ function loadTabulatorTable(data = []) {
     if (!tabulatorInstance) {
         tabulatorInstance = new Tabulator("#tabulator-table", {
             layout: "fitColumns",
+            pagination: "local",
+            paginationSize: 10,
+            paginationSizeSelector: [10, 20, 50, 100],
+            movableColumns: true,
+            height: "500px",
             columns: [
                 {
-                    title: "Data Dok Pabean",
+                    title: "Data dok pabean",
                     columns: [
                         { title: "Jenis", field: "bctype", width: 100, headerFilter: "input" },
                         { title: "No. Daftar", field: "nomor_daftar", width: 120, headerFilter: "input" },
@@ -140,7 +155,7 @@ function loadTabulatorTable(data = []) {
                     ]
                 },
                 {
-                    title: "Bukti Pengeluaran Barang",
+                    title: "Bukti Penerimaan Barang",
                     columns: [
                         { title: "No", field: "name", widthGrow: 1.5, headerFilter: "input" },
                         { title: "Tanggal", field: "tglTrans", sorter: "date", width: 120, headerFilter: "input" }
@@ -152,8 +167,8 @@ function loadTabulatorTable(data = []) {
                         { title: "Penerima Barang", field: "customer_name", width: 120, headerFilter: "input" },
                         { title: "Kode Barang", field: "KdBrg", width: 120, headerFilter: "input" },
                         { title: "Nama Barang", field: "item_name", width: 120, headerFilter: "input" },
-                        { title: "Satuan Barang", field: "uom", width: 100, headerFilter: "input" },
-                        { title: "Jumlah Barang", field: "qty", sorter: "number", width: 100, headerFilter: "input"},
+                        { title: "Satuan Barang", field: "uom", width: 100},
+                        { title: "Jumlah Barang", field: "qty", sorter: "number", width: 100},
                     ]
                 },
             ],
@@ -164,7 +179,31 @@ function loadTabulatorTable(data = []) {
 
     tabulatorInstance.setData(data);
 
-    // ✅ Add Export Buttons
+    setupExportButtons();
+}
+
+// ✅ UI Improvements
+function setupReportUI() {
+    let reportWrapper = document.querySelector(".report-wrapper");
+    if (reportWrapper) {
+        reportWrapper.style.display = "block";  
+        reportWrapper.style.padding = "10px";
+        reportWrapper.style.backgroundColor = "#f8f9fa";
+        reportWrapper.style.borderRadius = "8px";
+    }
+
+    setTimeout(() => {
+        let tableHolder = document.querySelector(".tabulator-tableholder");
+        if (tableHolder) {
+            tableHolder.style.height = "auto";
+            tableHolder.style.minHeight = "300px";
+            tableHolder.style.overflowX = "auto";
+        }
+    }, 500);
+}
+
+// ✅ Export Buttons Setup
+function setupExportButtons() {
     let exportWrapper = document.getElementById("export-buttons");
     if (!exportWrapper) {
         exportWrapper = document.createElement("div");
@@ -173,15 +212,14 @@ function loadTabulatorTable(data = []) {
 
         let exportExcelBtn = document.createElement("button");
         exportExcelBtn.innerText = "📊 Export to Excel";
-        exportExcelBtn.onclick = () => tabulatorInstance.download("xlsx", "laporan_pengeluaran_barang.xlsx");
+        exportExcelBtn.onclick = () => tabulatorInstance.download("xlsx", "laporan_pemasukan_barang.xlsx");
         exportWrapper.appendChild(exportExcelBtn);
 
         let exportPdfBtn = document.createElement("button");
         exportPdfBtn.innerText = "📄 Export to PDF";
-        exportPdfBtn.onclick = () => tabulatorInstance.download("pdf", "laporan_pengeluaran_barang.pdf", { orientation: "landscape", title: "LAPORAN PENGELUARAN BARANG PER DOKUMEN PABEAN" });
+        exportPdfBtn.onclick = () => tabulatorInstance.download("pdf", "laporan_pemasukan_barang.pdf", { orientation: "landscape", title: "LAPORAN PEMASUKAN BARANG PER DOKUMEN PABEAN" });
         exportWrapper.appendChild(exportPdfBtn);
 
-        // ✅ Style export buttons
         document.querySelectorAll("#export-buttons button").forEach(button => {
             button.style.margin = "5px";
             button.style.padding = "6px 12px";
@@ -196,10 +234,3 @@ function loadTabulatorTable(data = []) {
         });
     }
 }
-
-// ✅ Refresh report when filters change
-frappe.query_report.refresh = function() {
-    console.log("🔄 Refreshing Report...");
-    getReportData();
-};
-

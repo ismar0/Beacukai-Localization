@@ -14,6 +14,37 @@ frappe.require([
     console.log("✅ Tabulator and dependencies loaded!");
 });
 
+const fontStyle = document.createElement("style");
+fontStyle.innerHTML = `
+  .tabulator {
+    font-family: Calibri, sans-serif !important;
+    font-size: 11px !important;
+  }
+
+  .tabulator .tabulator-header .tabulator-col .tabulator-col-title {
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: center;
+    padding: 4px;
+    font-size: 11px !important;
+  }
+
+  .tabulator .tabulator-cell {
+    font-size: 11px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  .tabulator .tabulator-header {
+    font-size: 11px !important;
+  }
+
+  .tabulator .tabulator-tableholder {
+    font-size: 11px !important;
+  }
+`;
+document.head.appendChild(fontStyle);
+
 frappe.query_reports["LAPORAN PEMASUKAN BARANG  PER DOKUMEN PABEAN"] = {
     filters: [
         {
@@ -109,6 +140,11 @@ function loadTabulatorTable(data = []) {
     if (!tabulatorInstance) {
         tabulatorInstance = new Tabulator("#tabulator-table", {
             layout: "fitColumns",
+            pagination: "local",
+            paginationSize: 10,
+            paginationSizeSelector: [10, 20, 50, 100],
+            movableColumns: true,
+            height: "500px",
             columns: [
                 {
                     title: "Data dok pabean",
@@ -131,8 +167,8 @@ function loadTabulatorTable(data = []) {
                         { title: "Pengirim Barang", field: "supplier_name", width: 120, headerFilter: "input" },
                         { title: "Kode Barang", field: "KdBrg", width: 120, headerFilter: "input" },
                         { title: "Nama Barang", field: "item_name", width: 120, headerFilter: "input" },
-                        { title: "Satuan Barang", field: "uom", width: 100, headerFilter: "input" },
-                        { title: "Jumlah Barang", field: "received_qty", sorter: "number", width: 100, headerFilter: "input"},
+                        { title: "Satuan Barang", field: "uom", width: 100 },
+                        { title: "Jumlah Barang", field: "received_qty", sorter: "number", width: 100},
                     ]
                 },
             ],
