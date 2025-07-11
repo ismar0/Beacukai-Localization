@@ -1,13 +1,13 @@
 // Copyright (c) 2025, Ismarwanto and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Header", {
+// frappe.ui.form.on("Dokumen Pabean", {
 // 	refresh(frm) {
 
 // 	},
 // });
 
-frappe.ui.form.on('Header', {
+frappe.ui.form.on('Dokumen Pabean', {
     onload: function(frm) {
         // Set tanggal_aju ke hari ini jika belum ada
         if (frm.is_new() && !frm.doc.tanggal_aju) {

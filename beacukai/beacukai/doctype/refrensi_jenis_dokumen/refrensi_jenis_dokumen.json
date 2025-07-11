@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "field:kode_dokumen",
  "creation": "2025-07-10 13:35:25.742125",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -15,7 +15,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Kode Dokumen",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "column_break_qrtz",
@@ -31,11 +32,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-10 14:31:30.147752",
+ "modified": "2025-07-11 14:26:03.919534",
  "modified_by": "Administrator",
  "module": "Beacukai",
  "name": "Refrensi Jenis Dokumen",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

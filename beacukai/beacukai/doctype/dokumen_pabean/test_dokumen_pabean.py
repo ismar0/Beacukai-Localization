@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestHeader(FrappeTestCase):
+class TestDokumenPabean(FrappeTestCase):
 	pass

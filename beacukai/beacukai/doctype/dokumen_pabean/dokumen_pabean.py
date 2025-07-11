@@ -3,7 +3,7 @@ import json
 from frappe.model.document import Document
 from frappe.utils import getdate, nowdate
 
-class Header(Document):
+class DokumenPabean(Document):
     def autoname(self):
         self.name = self.nomor_aju = generate_nomor_aju(self, increment=True)
 
@@ -45,7 +45,7 @@ def generate_nomor_aju(doc, increment=False):
             next_number = current_count + 1
             calon_nomor = f"{nomor_aju_prefix}{str(next_number).zfill(6)}"
 
-            if not frappe.db.exists("Header", calon_nomor):
+            if not frappe.db.exists("DokumenPabean", calon_nomor):
                 break
 
             current_count += 1

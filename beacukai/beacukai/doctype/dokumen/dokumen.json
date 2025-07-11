@@ -3,37 +3,53 @@
  "allow_rename": 1,
  "creation": "2025-07-11 11:17:14.818714",
  "doctype": "DocType",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "section_break_7y9z"
+  "jenis_dokumen",
+  "nomor_dokumen",
+  "tanggal_dokumen",
+  "fasilitas_dokumen"
  ],
  "fields": [
   {
-   "fieldname": "section_break_7y9z",
-   "fieldtype": "Section Break"
+   "fieldname": "jenis_dokumen",
+   "fieldtype": "Link",
+   "label": "Jenis Dokumen",
+   "options": "Refrensi Jenis Dokumen"
+  },
+  {
+   "fieldname": "nomor_dokumen",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nomor Dokumen",
+   "options": "Nomor Dokumen Pabean",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tanggal_dokumen",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Dokumen",
+   "options": "Tanggal Dokumen Pabean",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fasilitas_dokumen",
+   "fieldtype": "Data",
+   "label": "Fasilitas Dokumen",
+   "options": "Isi Fasilitas jika perlu"
   }
  ],
  "index_web_pages_for_search": 1,
+ "istable": 1,
  "links": [],
- "modified": "2025-07-11 11:17:14.818714",
+ "modified": "2025-07-11 14:24:19.961047",
  "modified_by": "Administrator",
  "module": "Beacukai",
  "name": "Dokumen",
  "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
+ "permissions": [],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

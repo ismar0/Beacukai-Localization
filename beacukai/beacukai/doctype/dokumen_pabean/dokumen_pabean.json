@@ -20,7 +20,11 @@
   "column_break_ngvp",
   "keterangan_lain",
   "jenis_tpb",
-  "tujuan_pengiriman"
+  "tujuan_pengiriman",
+  "entitas_tab",
+  "table_bdwa",
+  "dokumen",
+  "table_dmyp"
  ],
  "fields": [
   {
@@ -111,14 +115,34 @@
    "fieldname": "tujuan_pengiriman",
    "fieldtype": "Data",
    "label": "Tujuan Pengiriman"
+  },
+  {
+   "fieldname": "table_dmyp",
+   "fieldtype": "Table",
+   "options": "Dokumen"
+  },
+  {
+   "fieldname": "dokumen",
+   "fieldtype": "Tab Break",
+   "label": "Dokumen"
+  },
+  {
+   "fieldname": "entitas_tab",
+   "fieldtype": "Tab Break",
+   "label": "Entitas"
+  },
+  {
+   "fieldname": "table_bdwa",
+   "fieldtype": "Table",
+   "options": "Entitas"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-11 11:05:07.486110",
+ "modified": "2025-07-11 15:28:20.790564",
  "modified_by": "Administrator",
  "module": "Beacukai",
- "name": "Header",
+ "name": "Dokumen Pabean",
  "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
