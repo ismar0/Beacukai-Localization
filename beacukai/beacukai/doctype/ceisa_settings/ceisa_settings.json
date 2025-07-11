@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-09 09:37:09.404969",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "perusahaan",
+  "alamat",
+  "kppbc",
+  "penanggung_jawab",
+  "jabatan",
+  "column_break_afxs",
+  "abbr",
+  "npwp",
+  "nitku",
+  "skep_no",
+  "skep_date",
+  "api_perusahaan",
+  "nib",
+  "section_break_yjjs",
+  "api_url",
+  "auth_url",
+  "column_break_rnet",
+  "ceisa_username",
+  "ceisa_password",
+  "section_break_vwmo",
+  "access_token",
+  "column_break_vltv",
+  "refresh_token",
+  "column_break_mlsl",
+  "token_expiry",
+  "prefix_aju_tab",
+  "nomor_aju_counter"
+ ],
+ "fields": [
+  {
+   "fieldname": "npwp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NPWP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "auth_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Auth URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_afxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "skep_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "No. Skep",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "API Base URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "perusahaan",
+   "fieldtype": "Data",
+   "label": "Nama Perusahaan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "alamat",
+   "fieldtype": "Small Text",
+   "label": "Alamat",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kppbc",
+   "fieldtype": "Data",
+   "label": "KPPBC",
+   "reqd": 1
+  },
+  {
+   "fieldname": "penanggung_jawab",
+   "fieldtype": "Data",
+   "label": "Penanggung Jawab",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jabatan",
+   "fieldtype": "Data",
+   "label": "Jabatan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nitku",
+   "fieldtype": "Data",
+   "label": "NITKU",
+   "reqd": 1
+  },
+  {
+   "fieldname": "skep_date",
+   "fieldtype": "Date",
+   "label": "Skep Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_perusahaan",
+   "fieldtype": "Data",
+   "label": "API Perusahaan"
+  },
+  {
+   "fieldname": "nib",
+   "fieldtype": "Data",
+   "label": "NIB"
+  },
+  {
+   "fieldname": "section_break_yjjs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rnet",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ceisa_username",
+   "fieldtype": "Data",
+   "label": "Username",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ceisa_password",
+   "fieldtype": "Password",
+   "label": "Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_vwmo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "access_token",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Access Token"
+  },
+  {
+   "fieldname": "column_break_vltv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "refresh_token",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Refresh Token"
+  },
+  {
+   "fieldname": "column_break_mlsl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "token_expiry",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Token Expiry"
+  },
+  {
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "label": "Abbreviation"
+  },
+  {
+   "fieldname": "nomor_aju_counter",
+   "fieldtype": "Long Text",
+   "label": "Aju Counter"
+  },
+  {
+   "fieldname": "prefix_aju_tab",
+   "fieldtype": "Tab Break",
+   "label": "Prefix Aju"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-07-09 16:43:22.732073",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "CEISA Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

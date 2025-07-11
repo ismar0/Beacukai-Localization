@@ -6,3 +6,43 @@
 
 // 	},
 // });
+
+frappe.ui.form.on('Header', {
+    onload: function(frm) {
+        // Set tanggal_aju ke hari ini jika belum ada
+        if (frm.is_new() && !frm.doc.tanggal_aju) {
+            frm.set_value("tanggal_aju", frappe.datetime.get_today());
+        }
+    },
+
+    refresh: function(frm) {
+        // Auto generate nomor_aju jika sudah punya bctype dan tanggal_aju tapi belum ada nomor_aju
+        if (frm.doc.bctype && frm.doc.tanggal_aju && !frm.doc.nomor_aju) {
+            generate_nomor_aju(frm);
+        }
+    },
+
+    bctype: function(frm) {
+        // Saat pilih bctype manual
+        if (frm.doc.bctype && frm.doc.tanggal_aju && !frm.doc.nomor_aju) {
+            generate_nomor_aju(frm);
+        }
+    }
+});
+
+function generate_nomor_aju(frm) {
+    frappe.call({
+        method: "beacukai.beacukai.doctype.header.header.generate_nomor_aju_api",
+        args: {
+            bctype: frm.doc.bctype,
+            tanggal_aju: frm.doc.tanggal_aju
+        },
+        callback: function(r) {
+            if (r.message) {
+                frm.set_value("nomor_aju", r.message);
+            }
+        }
+    });
+}
+
+

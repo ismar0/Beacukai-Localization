@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-11 10:42:46.653163",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pengusaha_tpb__pengusaha_kena_pajak_column",
+  "nama",
+  "npwp__nitku",
+  "alamat",
+  "no_izin_tpb",
+  "tanggal_izin_tpb",
+  "nib",
+  "pengirim_barang_column",
+  "pilih_supplier_pengirim",
+  "nama_suplier",
+  "npwp__nitku_supplier",
+  "alamat_supplier",
+  "pemilik_barang_column",
+  "nama_pemilik_barang",
+  "npwp__nitku_pemilik",
+  "alamat_pemilik"
+ ],
+ "fields": [
+  {
+   "fieldname": "pengusaha_tpb__pengusaha_kena_pajak_column",
+   "fieldtype": "Column Break",
+   "label": "Pengusaha TPB / Pengusaha Kena Pajak"
+  },
+  {
+   "fieldname": "nama",
+   "fieldtype": "Data",
+   "label": "Nama"
+  },
+  {
+   "fieldname": "npwp__nitku",
+   "fieldtype": "Data",
+   "label": "NPWP / NITKU"
+  },
+  {
+   "fieldname": "alamat",
+   "fieldtype": "Text",
+   "label": "Alamat",
+   "max_height": "40px"
+  },
+  {
+   "fieldname": "no_izin_tpb",
+   "fieldtype": "Data",
+   "label": "No Izin TPB"
+  },
+  {
+   "fieldname": "tanggal_izin_tpb",
+   "fieldtype": "Date",
+   "label": "Tanggal Izin TPB"
+  },
+  {
+   "fieldname": "nib",
+   "fieldtype": "Data",
+   "label": "NIB"
+  },
+  {
+   "description": "Penjual Barang Kena Pajak / Penerima Jasa Kena Pajak",
+   "fieldname": "pengirim_barang_column",
+   "fieldtype": "Column Break",
+   "label": "Pengirim Barang"
+  },
+  {
+   "fieldname": "pilih_supplier_pengirim",
+   "fieldtype": "Select",
+   "label": "Pilih Supplier Pengirim"
+  },
+  {
+   "fieldname": "nama_suplier",
+   "fieldtype": "Autocomplete",
+   "label": "Nama Suplier"
+  },
+  {
+   "fieldname": "npwp__nitku_supplier",
+   "fieldtype": "Autocomplete",
+   "label": "NPWP / NITKU Supplier"
+  },
+  {
+   "fieldname": "alamat_supplier",
+   "fieldtype": "Autocomplete",
+   "label": "Alamat Supplier"
+  },
+  {
+   "fieldname": "pemilik_barang_column",
+   "fieldtype": "Column Break",
+   "label": "Pemilik Barang"
+  },
+  {
+   "fieldname": "nama_pemilik_barang",
+   "fieldtype": "Data",
+   "label": "Nama Pemilik Barang"
+  },
+  {
+   "fieldname": "npwp__nitku_pemilik",
+   "fieldtype": "Data",
+   "label": "NPWP / NITKU Pemilik"
+  },
+  {
+   "fieldname": "alamat_pemilik",
+   "fieldtype": "Text",
+   "label": "Alamat Pemilik",
+   "max_height": "40px"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-11 11:02:41.763583",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "Entitas",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

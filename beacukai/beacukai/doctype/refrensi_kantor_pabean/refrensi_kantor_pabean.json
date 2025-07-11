@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:kode_kantor",
+ "creation": "2025-07-10 08:39:48.778924",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "kode_kantor",
+  "uraian_kantor"
+ ],
+ "fields": [
+  {
+   "fieldname": "kode_kantor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kode Kantor",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "uraian_kantor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Uraian Kantor",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-10 09:22:46.750346",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "Refrensi Kantor Pabean",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "uraian_kantor"
+}

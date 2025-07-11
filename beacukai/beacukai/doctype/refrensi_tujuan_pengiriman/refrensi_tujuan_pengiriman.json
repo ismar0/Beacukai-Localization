@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-07-10 14:41:05.250616",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "kode_dokumen",
+  "column_break_okzb",
+  "kode_tujuan_pengiriman",
+  "uraian_tujuan_pengiriman"
+ ],
+ "fields": [
+  {
+   "fieldname": "kode_dokumen",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Kode Dokumen",
+   "options": "\n25\n261\n27\n40\n41\n512\n513\n522",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_okzb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kode_tujuan_pengiriman",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kode Tujuan Pengiriman",
+   "reqd": 1
+  },
+  {
+   "fieldname": "uraian_tujuan_pengiriman",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Uraian Tujuan Pengiriman",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-10 15:05:19.381647",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "Refrensi Tujuan Pengiriman",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "uraian_tujuan_pengiriman"
+}

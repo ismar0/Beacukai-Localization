@@ -1,17 +1,26 @@
 {
  "actions": [],
- "autoname": "field:nomor_aju",
  "creation": "2025-02-28 13:06:50.688350",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "header_tab",
   "bctype",
+  "column_break_aidn",
+  "nomor_daftar",
+  "column_break_xrab",
+  "tanggal_daftar",
   "section_break_djqo",
+  "pengajuan",
   "nomor_aju",
   "tanggal_aju",
   "column_break_wzdr",
-  "nomor_daftar",
-  "tanggal_daftar"
+  "kantor_pabean_head",
+  "kantor_pabean",
+  "column_break_ngvp",
+  "keterangan_lain",
+  "jenis_tpb",
+  "tujuan_pengiriman"
  ],
  "fields": [
   {
@@ -30,15 +39,15 @@
    "fieldname": "nomor_aju",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Nomor Aju",
-   "reqd": 1,
-   "unique": 1
+   "label": "Nomor Aju"
   },
   {
+   "default": "Today",
    "fieldname": "tanggal_aju",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Tanggal Aju",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -49,23 +58,68 @@
    "fieldname": "nomor_daftar",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Nomor Daftar",
-   "reqd": 1
+   "label": "Nomor Daftar"
   },
   {
    "fieldname": "tanggal_daftar",
    "fieldtype": "Date",
-   "label": "Tanggal Daftar",
-   "reqd": 1
+   "label": "Tanggal Daftar"
+  },
+  {
+   "fieldname": "header_tab",
+   "fieldtype": "Tab Break",
+   "label": "Header"
+  },
+  {
+   "fieldname": "column_break_aidn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xrab",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pengajuan",
+   "fieldtype": "Heading",
+   "label": "Pengajuan"
+  },
+  {
+   "fieldname": "kantor_pabean_head",
+   "fieldtype": "Heading",
+   "label": "Kantor Pabean"
+  },
+  {
+   "fieldname": "kantor_pabean",
+   "fieldtype": "Data",
+   "label": "Kantor Pabean"
+  },
+  {
+   "fieldname": "column_break_ngvp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "keterangan_lain",
+   "fieldtype": "Heading",
+   "label": "Keterangan Lain"
+  },
+  {
+   "fieldname": "jenis_tpb",
+   "fieldtype": "Data",
+   "label": "Jenis TPB"
+  },
+  {
+   "fieldname": "tujuan_pengiriman",
+   "fieldtype": "Data",
+   "label": "Tujuan Pengiriman"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-03 14:18:39.579730",
+ "modified": "2025-07-11 11:05:07.486110",
  "modified_by": "Administrator",
  "module": "Beacukai",
  "name": "Header",
- "naming_rule": "By fieldname",
+ "naming_rule": "By script",
  "owner": "Administrator",
  "permissions": [
   {
@@ -82,9 +136,10 @@
   }
  ],
  "quick_entry": 1,
- "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "nomor_aju"
+ "title_field": "nomor_aju",
+ "track_changes": 1
 }

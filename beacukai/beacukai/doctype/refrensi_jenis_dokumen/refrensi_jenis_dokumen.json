@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-07-10 13:35:25.742125",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "kode_dokumen",
+  "column_break_qrtz",
+  "uraian_dokumen"
+ ],
+ "fields": [
+  {
+   "fieldname": "kode_dokumen",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kode Dokumen",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qrtz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uraian_dokumen",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Uraian Dokumen",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-10 14:31:30.147752",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "Refrensi Jenis Dokumen",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "uraian_dokumen"
+}
