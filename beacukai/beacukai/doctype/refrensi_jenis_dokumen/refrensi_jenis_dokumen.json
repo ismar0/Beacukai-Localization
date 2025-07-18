@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "field:kode_dokumen",
  "creation": "2025-07-10 13:35:25.742125",
  "doctype": "DocType",
@@ -27,12 +28,13 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Uraian Dokumen",
+   "length": 250,
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-11 14:26:03.919534",
+ "modified": "2025-07-16 16:36:10.988672",
  "modified_by": "Administrator",
  "module": "Beacukai",
  "name": "Refrensi Jenis Dokumen",
@@ -52,6 +54,8 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

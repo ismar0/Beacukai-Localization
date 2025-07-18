@@ -18,7 +18,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-10 09:29:46.498016",
+ "modified": "2025-07-16 13:12:17.768253",
  "modified_by": "Administrator",
  "module": "Beacukai",
  "name": "Jenis TPB",
@@ -38,6 +38,7 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

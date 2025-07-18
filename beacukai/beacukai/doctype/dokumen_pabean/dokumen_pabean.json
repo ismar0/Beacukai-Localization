@@ -24,7 +24,38 @@
   "entitas_tab",
   "table_bdwa",
   "dokumen",
-  "table_dmyp"
+  "table_dmyp",
+  "pengangkut_tab",
+  "table_qdlt",
+  "kemasan_dan_peti_kemas_tab",
+  "kemasan_column",
+  "table_tmah",
+  "column_break_twbd",
+  "table_zjrd",
+  "transaksi_tab",
+  "harga_column",
+  "harga_penyerahan",
+  "nilai_jasa",
+  "uang_muka",
+  "biaya_pengurang",
+  "berat_column",
+  "volume",
+  "bruto",
+  "netto",
+  "barang_tab",
+  "table_wpnz",
+  "pungutan_tab",
+  "table_vguu",
+  "pernyataan_tab",
+  "section_break_lefs",
+  "tempat_dan_tanggal_column",
+  "kota_pernyataan",
+  "tanggal_pernyataan",
+  "nama_column",
+  "nama_pernyataan",
+  "jabatan_pernytaan",
+  "section_break_dwug",
+  "setuju"
  ],
  "fields": [
   {
@@ -94,8 +125,9 @@
   },
   {
    "fieldname": "kantor_pabean",
-   "fieldtype": "Data",
-   "label": "Kantor Pabean"
+   "fieldtype": "Link",
+   "label": "Kantor Pabean",
+   "options": "Refrensi Kantor Pabean"
   },
   {
    "fieldname": "column_break_ngvp",
@@ -108,13 +140,15 @@
   },
   {
    "fieldname": "jenis_tpb",
-   "fieldtype": "Data",
-   "label": "Jenis TPB"
+   "fieldtype": "Link",
+   "label": "Jenis TPB",
+   "options": "Jenis TPB"
   },
   {
    "fieldname": "tujuan_pengiriman",
-   "fieldtype": "Data",
-   "label": "Tujuan Pengiriman"
+   "fieldtype": "Link",
+   "label": "Tujuan Pengiriman",
+   "options": "Refrensi Tujuan Pengiriman"
   },
   {
    "fieldname": "table_dmyp",
@@ -135,11 +169,176 @@
    "fieldname": "table_bdwa",
    "fieldtype": "Table",
    "options": "Entitas"
+  },
+  {
+   "fieldname": "pengangkut_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pengangkut"
+  },
+  {
+   "fieldname": "table_qdlt",
+   "fieldtype": "Table",
+   "options": "Pengangkut"
+  },
+  {
+   "fieldname": "kemasan_dan_peti_kemas_tab",
+   "fieldtype": "Tab Break",
+   "label": "Kemasan dan Peti Kemas"
+  },
+  {
+   "fieldname": "column_break_twbd",
+   "fieldtype": "Column Break",
+   "label": "Peti Kemas"
+  },
+  {
+   "fieldname": "table_tmah",
+   "fieldtype": "Table",
+   "options": "Kemasan"
+  },
+  {
+   "fieldname": "kemasan_column",
+   "fieldtype": "Column Break",
+   "label": "Kemasan"
+  },
+  {
+   "fieldname": "table_zjrd",
+   "fieldtype": "Table",
+   "options": "Kontainer"
+  },
+  {
+   "fieldname": "transaksi_tab",
+   "fieldtype": "Tab Break",
+   "label": "Transaksi"
+  },
+  {
+   "fieldname": "harga_column",
+   "fieldtype": "Column Break",
+   "label": "Harga"
+  },
+  {
+   "fieldname": "harga_penyerahan",
+   "fieldtype": "Float",
+   "label": "Harga Penyerahan / Harga Jual",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "nilai_jasa",
+   "fieldtype": "Float",
+   "label": "Nilai Jasa",
+   "precision": "2"
+  },
+  {
+   "fieldname": "uang_muka",
+   "fieldtype": "Float",
+   "label": "Uang Muka",
+   "precision": "2"
+  },
+  {
+   "fieldname": "biaya_pengurang",
+   "fieldtype": "Float",
+   "label": "Diskon",
+   "precision": "2"
+  },
+  {
+   "fieldname": "berat_column",
+   "fieldtype": "Column Break",
+   "label": "Berat"
+  },
+  {
+   "fieldname": "volume",
+   "fieldtype": "Float",
+   "label": "Volume (m3)",
+   "precision": "4"
+  },
+  {
+   "fieldname": "bruto",
+   "fieldtype": "Float",
+   "label": "Berat Kotor (KGM)",
+   "precision": "4"
+  },
+  {
+   "fieldname": "netto",
+   "fieldtype": "Float",
+   "label": "Berat Bersih (KGM)",
+   "precision": "4"
+  },
+  {
+   "fieldname": "barang_tab",
+   "fieldtype": "Tab Break",
+   "label": "Barang"
+  },
+  {
+   "fieldname": "pungutan_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pungutan"
+  },
+  {
+   "fieldname": "pernyataan_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pernyataan"
+  },
+  {
+   "fieldname": "section_break_lefs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tempat_dan_tanggal_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kota_pernyataan",
+   "fieldtype": "Data",
+   "label": "Tempat",
+   "placeholder": "Kota pernyataan"
+  },
+  {
+   "fieldname": "tanggal_pernyataan",
+   "fieldtype": "Date",
+   "label": "Tanggal",
+   "placeholder": "Tanggal pernyataan"
+  },
+  {
+   "fieldname": "nama_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nama_pernyataan",
+   "fieldtype": "Data",
+   "label": "Nama",
+   "placeholder": "nama pernyataan"
+  },
+  {
+   "fieldname": "jabatan_pernytaan",
+   "fieldtype": "Data",
+   "label": "Jabatan",
+   "placeholder": "Jabatan pernytaan"
+  },
+  {
+   "fieldname": "section_break_dwug",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "description": "Dengan ini saya menyatakan bertanggung jawab atas kebenaran hal-hal yang diberitahukan dalam dokumen ini dan keabsahan dokumen pelengkap pabean yang menjadi dasar pembuatan dokumen ini",
+   "fieldname": "setuju",
+   "fieldtype": "Check",
+   "label": "Setuju"
+  },
+  {
+   "fieldname": "table_vguu",
+   "fieldtype": "Table",
+   "options": "Pungutan"
+  },
+  {
+   "fieldname": "table_wpnz",
+   "fieldtype": "Table",
+   "options": "Barang"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-11 15:28:20.790564",
+ "modified": "2025-07-18 11:34:25.532452",
  "modified_by": "Administrator",
  "module": "Beacukai",
  "name": "Dokumen Pabean",

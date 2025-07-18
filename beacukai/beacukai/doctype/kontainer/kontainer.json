@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-17 09:36:15.802719",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "seri_kontainer",
+  "nomor_kontainer",
+  "kode_ukuran_kontainer",
+  "kode_jenis_kontainer",
+  "kode_tipe_kontainer"
+ ],
+ "fields": [
+  {
+   "fieldname": "seri_kontainer",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Seri Kontainer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nomor_kontainer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nomor Kontainer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kode_ukuran_kontainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Ukuran",
+   "options": "Refrensi Ukuran Kontainer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kode_jenis_kontainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Jenis",
+   "options": "Refrensi Jenis Kontainer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kode_tipe_kontainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tipe",
+   "options": "Refrensi Tipe Kontainer",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-17 09:38:39.480921",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "Kontainer",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

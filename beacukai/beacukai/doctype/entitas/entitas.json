@@ -3,78 +3,144 @@
  "allow_rename": 1,
  "creation": "2025-07-11 10:42:46.653163",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "jenis_entitas",
-  "pilih_vendor",
-  "nama",
-  "npwp__nitku",
-  "alamat",
-  "no_izin_tpb",
-  "tanggal_izin_tpb",
-  "nib"
+  "seri_entitas",
+  "column_break_cezm",
+  "kode_jenis_identitas",
+  "link_doctype",
+  "column_break_znqu",
+  "nomor_identitas",
+  "section_break_aebm",
+  "supplier",
+  "nama_entitas",
+  "alamat_entitas",
+  "section_break_gvmo",
+  "no_ijin_entitas",
+  "tanggal_ijin_entitas",
+  "nib",
+  "column_break_blsd",
+  "kode_jenis_api",
+  "kode_status",
+  "kode_negara"
  ],
  "fields": [
   {
-   "fieldname": "nama",
+   "fieldname": "nib",
    "fieldtype": "Data",
+   "label": "NIB"
+  },
+  {
+   "fieldname": "jenis_entitas",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Nama",
+   "label": "Jenis Entitas",
+   "options": "Refrensi Entitas",
    "reqd": 1
   },
   {
-   "fieldname": "npwp__nitku",
+   "fieldname": "column_break_cezm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kode_jenis_identitas",
+   "fieldtype": "Link",
+   "label": "Kode Jenis Identitas",
+   "options": "Refrensi Jenis Identitas",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_znqu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_aebm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_gvmo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nomor_identitas",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "NPWP / NITKU",
    "reqd": 1
   },
   {
-   "fieldname": "alamat",
-   "fieldtype": "Text",
+   "fieldname": "supplier",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Pilih Vendor",
+   "options": "link_doctype"
+  },
+  {
+   "fieldname": "nama_entitas",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama",
+   "reqd": 1
+  },
+  {
+   "fieldname": "alamat_entitas",
+   "fieldtype": "Small Text",
    "label": "Alamat",
    "max_height": "40px",
    "reqd": 1
   },
   {
-   "fieldname": "no_izin_tpb",
+   "fieldname": "no_ijin_entitas",
    "fieldtype": "Data",
-   "label": "No Izin TPB",
-   "reqd": 1
+   "label": "No Izin TPB"
   },
   {
-   "fieldname": "tanggal_izin_tpb",
+   "fieldname": "tanggal_ijin_entitas",
    "fieldtype": "Date",
-   "label": "Tanggal Izin TPB",
-   "reqd": 1
+   "label": "Tanggal Izin TPB"
   },
   {
-   "fieldname": "nib",
-   "fieldtype": "Data",
-   "label": "NIB",
-   "reqd": 1
+   "fieldname": "column_break_blsd",
+   "fieldtype": "Column Break"
   },
   {
-   "fieldname": "jenis_entitas",
-   "fieldtype": "Select",
+   "fieldname": "kode_jenis_api",
+   "fieldtype": "Link",
+   "label": "Kode Jenis API",
+   "options": "Refrensi Jenis API"
+  },
+  {
+   "fieldname": "kode_status",
+   "fieldtype": "Link",
+   "label": "Kode Status",
+   "options": "Refrensi Status Pengusaha"
+  },
+  {
+   "fieldname": "kode_negara",
+   "fieldtype": "Link",
+   "label": "Kode Negara",
+   "options": "Refrensi Negara"
+  },
+  {
+   "fieldname": "seri_entitas",
+   "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Jenis Entitas",
-   "options": "Pengusaha TPB\nPengirim Barang\nPemilik Barang",
-   "reqd": 1
+   "label": "Seri Entitas",
+   "read_only": 1
   },
   {
-   "fieldname": "pilih_vendor",
+   "fieldname": "link_doctype",
    "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Pilih Vendor",
-   "reqd": 1
+   "hidden": 1,
+   "label": "Link Vendor",
+   "options": "Supplier\nCustomer"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-07-11 15:27:39.530747",
+ "modified": "2025-07-16 16:24:11.714896",
  "modified_by": "Administrator",
  "module": "Beacukai",
  "name": "Entitas",

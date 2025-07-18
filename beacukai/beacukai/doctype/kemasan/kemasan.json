@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-17 09:15:42.999418",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "seri_kemasan",
+  "jumlah_kemasan",
+  "kode_kemasan",
+  "merek"
+ ],
+ "fields": [
+  {
+   "fieldname": "seri_kemasan",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Seri Kemasan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "jumlah_kemasan",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Jumlah Kemasan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kode_kemasan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Kode Kemasan",
+   "options": "Refrensi Jenis Kemasan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "merek",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Merek"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-17 09:20:04.672689",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "Kemasan",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

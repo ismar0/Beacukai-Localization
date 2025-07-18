@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "creation": "2025-07-18 10:41:01.781243",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "kode_fasilitas_tarif",
+  "kode_jenis_pungutan",
+  "nilai_pungutan"
+ ],
+ "fields": [
+  {
+   "fieldname": "kode_fasilitas_tarif",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kode Fasilitas Tarif"
+  },
+  {
+   "fieldname": "kode_jenis_pungutan",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kode Jenis Pungutan"
+  },
+  {
+   "fieldname": "nilai_pungutan",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Nilai Pungutan",
+   "precision": "2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-18 10:44:54.351613",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "Pungutan",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

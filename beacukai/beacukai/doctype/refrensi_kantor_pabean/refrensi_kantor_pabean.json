@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:kode_kantor",
  "creation": "2025-07-10 08:39:48.778924",
@@ -29,7 +30,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-10 09:22:46.750346",
+ "modified": "2025-07-16 11:44:00.302940",
  "modified_by": "Administrator",
  "module": "Beacukai",
  "name": "Refrensi Kantor Pabean",
@@ -49,8 +50,11 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "uraian_kantor"
+ "title_field": "uraian_kantor",
+ "track_changes": 1
 }

@@ -10,6 +10,7 @@
   "kppbc",
   "penanggung_jawab",
   "jabatan",
+  "kota_pernyataan",
   "column_break_afxs",
   "abbr",
   "npwp",
@@ -182,12 +183,18 @@
    "fieldname": "prefix_aju_tab",
    "fieldtype": "Tab Break",
    "label": "Prefix Aju"
+  },
+  {
+   "fieldname": "kota_pernyataan",
+   "fieldtype": "Data",
+   "label": "Kota Pernyataan",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-07-09 16:43:22.732073",
+ "modified": "2025-07-18 09:28:12.254370",
  "modified_by": "Administrator",
  "module": "Beacukai",
  "name": "CEISA Settings",

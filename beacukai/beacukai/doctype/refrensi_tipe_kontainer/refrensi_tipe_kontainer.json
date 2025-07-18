@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "autoname": "field:kode_tipe_kontainer",
+ "creation": "2025-07-17 09:31:22.290357",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "kode_tipe_kontainer",
+  "uraian_tipe_kontainer"
+ ],
+ "fields": [
+  {
+   "fieldname": "kode_tipe_kontainer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kode Tipe Kontainer",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "uraian_tipe_kontainer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Uraian Tipe Kontainer",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-17 09:32:16.709684",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "Refrensi Tipe Kontainer",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "uraian_tipe_kontainer",
+ "track_changes": 1
+}

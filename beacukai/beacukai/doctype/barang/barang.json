@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-18 11:24:23.133667",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "detail_barang_section",
+  "seri_barang",
+  "hscode",
+  "kode_barang",
+  "uraian_barang",
+  "column_break_czml",
+  "merk",
+  "ukuran",
+  "tipe",
+  "spesifikasi_lain",
+  "section_break_nqpv",
+  "jumlah_berat",
+  "column_break_neki",
+  "harga",
+  "section_break_vmpl",
+  "table_sblq"
+ ],
+ "fields": [
+  {
+   "fieldname": "seri_barang",
+   "fieldtype": "Int",
+   "label": "Seri Barang"
+  },
+  {
+   "fieldname": "hscode",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "HSCode",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kode_barang",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kode Barang",
+   "reqd": 1
+  },
+  {
+   "fieldname": "uraian_barang",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Uraian Barang",
+   "length": 250,
+   "reqd": 1
+  },
+  {
+   "default": "-",
+   "fieldname": "merk",
+   "fieldtype": "Data",
+   "label": "Merk"
+  },
+  {
+   "default": "-",
+   "fieldname": "ukuran",
+   "fieldtype": "Data",
+   "label": "Ukuran"
+  },
+  {
+   "default": "-",
+   "fieldname": "tipe",
+   "fieldtype": "Data",
+   "label": "Tipe"
+  },
+  {
+   "default": "-",
+   "fieldname": "spesifikasi_lain",
+   "fieldtype": "Data",
+   "label": "Spesifikasi Lain"
+  },
+  {
+   "fieldname": "detail_barang_section",
+   "fieldtype": "Section Break",
+   "label": "Detail Barang"
+  },
+  {
+   "fieldname": "column_break_czml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nqpv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "jumlah_berat",
+   "fieldtype": "Heading",
+   "label": "Jumlah Berat"
+  },
+  {
+   "fieldname": "column_break_neki",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "harga",
+   "fieldtype": "Heading",
+   "label": "Harga"
+  },
+  {
+   "fieldname": "section_break_vmpl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_sblq",
+   "fieldtype": "Table",
+   "options": "Barang Tarif"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-18 13:59:20.772480",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "Barang",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

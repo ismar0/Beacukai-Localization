@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-18 11:01:04.999983",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "seri_barang_tarif",
+  "kode_pungutan",
+  "kode_tarif",
+  "tarif",
+  "kode_fasilitas",
+  "tarif_fasilitas",
+  "column_break_rzyz",
+  "nilai_bayar",
+  "nilai_fasilitas",
+  "nilai_sudah_di_lunasi",
+  "kode_satuan",
+  "jumlah_satuan"
+ ],
+ "fields": [
+  {
+   "fieldname": "seri_barang_tarif",
+   "fieldtype": "Int",
+   "label": "Seri Barang Tarif",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kode_pungutan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Kode Pungutan",
+   "options": "Refrensi Jenis Pungutan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kode_tarif",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Kode Tarif",
+   "options": "Refrensi Jenis Tarif",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tarif",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Tarif",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kode_fasilitas",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Kode Fasilitas",
+   "options": "Refrensi Fasilitas Tarif",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tarif_fasilitas",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Tarif Fasilitas",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rzyz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nilai_bayar",
+   "fieldtype": "Float",
+   "label": "Nilai Bayar",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nilai_fasilitas",
+   "fieldtype": "Float",
+   "label": "Nilai Fasilitas",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nilai_sudah_di_lunasi",
+   "fieldtype": "Float",
+   "label": "Nilai Sudah di Lunasi",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kode_satuan",
+   "fieldtype": "Data",
+   "label": "Kode Satuan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "jumlah_satuan",
+   "fieldtype": "Float",
+   "label": "Jumlah Satuan",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-18 13:54:40.365049",
+ "modified_by": "Administrator",
+ "module": "Beacukai",
+ "name": "Barang Tarif",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
