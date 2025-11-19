@@ -1,0 +1,24 @@
+:root {
+  --primary: #4b7bec; /* Fallback default */
+}
+
+[data-theme="red"] {
+  --primary: #ff0000;
+  --primary-hover: #cc0000;
+  --primary-light: #ff6666;
+  --text-on-primary: #ffffff;
+}
+
+button,
+.btn,
+.btn-primary {
+  background-color: var(--primary) !important;
+  color: var(--text-on-primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.navbar,
+.navbar .navbar-header {
+  background-color: var(--primary) !important;
+  color: var(--text-on-primary) !important;
+}
